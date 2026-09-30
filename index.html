@@ -6,8 +6,18 @@
   <title>Ajustes de Android</title>
 </head>
 <body>
-  <a href="android-app://com.android.settings/android.settings.APPLICATION_SETTINGS">
-    Abrir Ajustes → Apps
+
+  <!-- Intento de abrir la sección de Apps de manera directa -->
+  <a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;category=android.intent.category.DEFAULT;component=com.android.settings/.Settings$ApplicationSettingsActivity;end">
+    Abrir Ajustes → Apps (Directo)
   </a>
+
+  <br><br>
+
+  <!-- Opción alternativa segura al menú principal de Ajustes -->
+  <a href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.android.settings;end">
+    Abrir Menú Principal de Ajustes
+  </a>
+
 </body>
 </html>
