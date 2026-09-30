@@ -7,16 +7,16 @@
 </head>
 <body>
 
-  <!-- Intento de abrir la sección de Apps de manera directa -->
-  <a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;category=android.intent.category.DEFAULT;component=com.android.settings/.Settings$ApplicationSettingsActivity;end">
-    Abrir Ajustes → Apps (Directo)
+  <!-- Forzamos a Chrome a quedarse en la misma página si bloquea el intento -->
+  <a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;package=com.android.settings;S.browser_fallback_url=javascript:void(0);end">
+    Abrir Ajustes → Apps (Sin redirección a Play Store)
   </a>
 
   <br><br>
 
-  <!-- Opción alternativa segura al menú principal de Ajustes -->
-  <a href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.android.settings;end">
-    Abrir Menú Principal de Ajustes
+  <!-- Intento al menú raíz de configuración usando el mismo método de escape -->
+  <a href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.android.settings;S.browser_fallback_url=javascript:void(0);end">
+    Abrir Ajustes Principal (Sin redirección)
   </a>
 
 </body>
